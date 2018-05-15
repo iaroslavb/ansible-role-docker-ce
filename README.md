@@ -1,4 +1,4 @@
-<img style="float:left" alight="left" height="128px" width="128px" src="https://github.com/iaroslavb/ansible-role-docker-ce/raw/master/docker_logo.png">
+<img style="float:left" alight="left" height="128px" width="512px" src="https://github.com/iaroslavb/ansible-role-docker-ce/raw/master/docker_logo.png">
 
 
 Ansible Role: Docker Community Edition
