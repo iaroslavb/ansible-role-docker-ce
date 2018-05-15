@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get remove docker-ce
 
 install:
-  - pip install ansible pyasn1 urllib3 pyOpenSSL ndg-httpsclient
+  - pip install ansible
   - sudo pip install pyasn1 urllib3 pyOpenSSL ndg-httpsclient
   - which ansible-playbook
 
