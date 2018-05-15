@@ -1,0 +1,39 @@
+---
+# tasks file for ansible-role-docker-ce/
+
+- name: Uninstall previous versions of Docker engine
+  apt:
+    name:   "{{ item }}"
+    state:  absent
+  with_items:
+    - docker
+    - docker-engine
+    - docker.io
+
+- name: Install prerequisite packages
+  apt:
+    name:         "{{ item }}"
+    state:        latest
+    update_cache: yes
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+
+- name: Add Docker’s official GPG key
+  apt_key:
+    url:    https://download.docker.com/linux/ubuntu/gpg
+    state:  present
+
+- name: Set up Docker CE stable repository
+  apt_repository:
+    repo:   "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+    state:  present
+
+- name: Install Docker CE
+  apt:
+    name:         docker-ce
+    state:        latest
+    update_cache: yes
+
