@@ -6,6 +6,7 @@ python: "2.7"
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq python-apt
+  - sudo apt-get remove docker-ce
 
 install:
   - pip install ansible
