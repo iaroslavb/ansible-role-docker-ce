@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get remove docker-ce
 
 install:
-  - pip3 install ansible
+  - pip install ansible pyasn1
   - which ansible-playbook
 
 script:
