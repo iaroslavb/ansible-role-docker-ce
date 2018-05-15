@@ -17,6 +17,7 @@ install:
 script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --become | grep -e 'changed=0.*failed=0'
   - docker version
 
 notifications:
