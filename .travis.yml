@@ -11,6 +11,7 @@ before_install:
 
 install:
   - pip install ansible pyasn1 urllib3 pyOpenSSL ndg-httpsclient
+  - sudo pip install pyasn1 urllib3 pyOpenSSL ndg-httpsclient
   - which ansible-playbook
 
 script:
