@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get remove docker-ce
 
 install:
-  - pip install ansible
+  - pip3 install ansible
 
 script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
